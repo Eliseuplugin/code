@@ -1,6 +1,12 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic'])
 
 .controller('DashCtrl', function($scope) {})
+
+.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
+  $scope.toggleLeft = function(){
+    $ionicSideMenuDelegate.toggleLeft()
+  }
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -17,11 +23,6 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
-  $scope.toggleLeft = function(){
-    $ionicSideMenuDelegate.toggleLeft()
-  }
-})
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
