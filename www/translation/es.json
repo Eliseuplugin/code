@@ -1,5 +1,9 @@
 {
 	"SETTINGS_EN": "English",
 	"SETTINGS_PT": "Portuguese",
-	"SETTINGS_ES": "Español"
+	"SETTINGS_ES": "Español",
+	"SETTINGS_INFORMATION": "Información",
+	"SETTINGS_CLANGUAGE": "Cambiar la lengua",
+	"SELECTED_LANGUAGE":"Seleccione su idioma",
+	"SETTINGS_APP": "Ajustes"
 }

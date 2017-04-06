@@ -1,5 +1,10 @@
 {
 	"SETTINGS_EN": "Inglês",
 	"SETTINGS_PT": "Português",
-	"SETTINGS_ES": "Espanhol"
+	"SETTINGS_ES": "Espanhol",
+	"SETTINGS_INFORMATION": "Informação",
+	"SETTINGS_CLANGUAGE": "Escolha a sua língua",
+	"SELECTED_LANGUAGE":"Seleccione a sua língua",
+	"SETTINGS_APP": "Definições"
+
 }
