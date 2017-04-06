@@ -1,1 +1,17 @@
-/* Empty. Add your own CSS if you like */
+/* codigo do menu esquerdo cores e animacoes no estilo*/
+.side-menu-gradient{
+	background: -webkit-linear-gradient(top, #5C25BD 0%, #000 100%);
+	background: -o-linear-gradient(top, #4389A2 0%, #000 100%);
+	background: linear-gradient(bottom, #4389A2 0%, #000 100%);
+	background: linear-gradient(to top, #4389A2 , #886AEA);
+	/*background-repeat: repeat-x;*/
+}
+
+.side-menu-gradient ion-item, .side-menu-gradient ion-item a, .side-menu-gradient ion-header-bar,
+.side-menu-gradient div {
+  /*background : none !important;*/
+  background-color : transparent !important;
+  border : none !important;
+  color : white;
+}
+

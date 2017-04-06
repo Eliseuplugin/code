@@ -23,6 +23,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
+
+//para trocar as linguas do aplicativo
+.controller('Ctrl,' ['$scope', '$translate', function ($scope, $translate) {
+  console.log("Ctrl controller started");
+  $scope.settings = 0;
+  $scope.settings.lang = "en";
+  $scope.lang = "pt";
+  $scope.lang = "es";
+  $scope.changeLanguage = function (key){
+    $translate.use(key);
+  };
+}])
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states

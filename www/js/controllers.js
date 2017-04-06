@@ -17,6 +17,12 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
+  $scope.toggleLeft = function(){
+    $ionicSideMenuDelegate.toggleLeft()
+  }
+})
+
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
