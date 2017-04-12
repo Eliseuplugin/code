@@ -1,4 +1,48 @@
 angular.module('starter.services', [])
+.service('playlistService', ['$sce', '$http', function($sce, $http) {
+  var playlistService = this;
+  
+  playlistService.audioPlayList = [];
+  playlistService.videoPlayList = [];
+  playlistService.main = undefined;
+  playlistService.selected = undefined;
+
+  playlistService.getClicked = function(){
+     return playlistService.selected != null ? playlistService.selected.chapter_id - 1 : 0;
+  };
+
+  playlistService.setClicked = function(data){
+    playlistService.selected = data;
+  };
+
+  playlistService.getMain = function(main){
+    return playlistService.main;
+  };
+
+  playlistService.setMain = function(main){
+    playlistService.main = main;
+  };
+
+  playlistService.getAudioPlayList = function(){
+
+     return playlistService.audioPlayList;
+  };
+
+  playlistService.setAudioPlayList = function(value){
+    console.log("Audio PlayList: ", JSON.stringify(value));
+      playlistService.audioPlayList = value;
+  };
+
+    playlistService.getVideoPlayList = function(){
+     return playlistService.videoPlayList;
+  };
+
+  playlistService.setVideoPlayList = function(value){
+    //PREPARE videoPlayList
+    playlistService.videoPlayList = value;
+  };
+
+}])
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array

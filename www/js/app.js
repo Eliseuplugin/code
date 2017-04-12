@@ -1,4 +1,11 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'pascalprecht.translate'])
+angular.module('starter', ['ionic', 
+  'starter.controllers', 'starter.services', 'pascalprecht.translate',
+  'ui.rCalendar',
+  "com.2fdevs.videogular",
+"com.2fdevs.videogular.plugins.controls",
+"com.2fdevs.videogular.plugins.buffering",
+"com.2fdevs.videogular.plugins.overlayplay",
+"com.2fdevs.videogular.plugins.poster"])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -14,6 +21,76 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
   });
+})
+
+// variaveis dos eventos da lista
+.factory('ListService', function() {
+
+  var eventsList = [{
+    id: "1",
+    titulo: "Biblia",
+    data: "07/03/2017",
+    descricao: "test",
+    provincia: "Sofala"
+  },
+  {
+    id: "2",
+    titulo: "Sagrada",
+    data: "07/03/2017",
+    descricao: "test",
+    provincia: "Quelimane"
+
+  },
+  {
+    id: "3",
+    titulo: "Almeida",
+    data: "07/03/2017",
+    descricao: "test",
+    provincia: "Tete"
+  },
+  {
+    id: "4",
+    titulo: "Fonte",
+    data: "07/03/2017",
+    descricao: "test",
+    provincia: "Niassa"
+
+  },
+  {
+    id: "5",
+    titulo: "Vida",
+    data: "07/03/2017",
+    descricao: "test",
+    provincia: "Nampula"
+
+  },
+   {
+    id: "6",
+    titulo: "Ministerio",
+    data: "07/03/2017",
+    descricao: "test",
+    provincia: "Manica"
+
+  },
+   {
+    id: "7",
+    titulo: "Igreja",
+    data: "07/03/2017",
+    descricao: "test",
+    provincia: "Cabo Delgado"
+
+  },
+  {
+    id: "8",
+    titulo: "Bethel",
+    data: "07/03/2017",
+    descricao: "test",
+    provincia: "Maputo"
+
+  }];
+
+  return eventsList;
+
 })
 
 .factory("$translateStaticFilesLoader",["$q","$http",function(a,b){return function(c){if(!c||!angular.isString(c.prefix)||!angular.isString(c.suffix))throw new Error("Couldn't load static files, no prefix or suffix specified!");var d=a.defer();return b({url:[c.prefix,c.key,c.suffix].join(""),method:"GET",params:""}).success(function(a){d.resolve(a)}).error(function(){d.reject(c.key)}),d.promise}}])
@@ -49,11 +126,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 }])
 
 .config(function($stateProvider, $urlRouterProvider) {
-
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
   // setup an abstract state for the tabs directive
@@ -69,8 +141,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/dash',
     views: {
       'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+        templateUrl: 'templates/tab-dash.html'
+        // controller: 'DashCtrl'
       }
     }
   })

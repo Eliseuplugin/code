@@ -1,0 +1,15 @@
+    <ion-header-bar class="row bar bar-positive second-header-bar bar-subheader loading-bar" headroom>
+
+        <div class="col search ">
+            
+            <div class="item-input-wrapper">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="{{'SEARCH' | translate}}" ng-model="search_query">
+                <button class="button button-clear" ng-click="clearSearch()" ng-show="search_query.length">X</button>
+            </div>
+            
+        </div>
+        <div class="col"></div>
+        <select class="col col-33 item item-input item-select" ng-options="language.{{settings.lang}}_language for language in settings.languages" ng-model="settings.rLanguage" ng-value='{{language[settings.rLanguage]}}' ng-init="settings.rLanguage = settings.languages[settings.rLanguage.id]">
+        </select>
+    </ion-header-bar>

@@ -1,3 +1,123 @@
+ion-content h1 { 
+	color: #fff;
+	font-family: serif italic;
+}
+
+
+
+
+/* Calendar Page */
+table.event-detail-table {
+	height:50px;
+}
+
+
+.splash {
+	background: linear-gradient(to top, #134E5E , #71B280);
+	/*background-image: url(images/Cnc-Background-Web-PSD.png);*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.brading {
+	width: 50%;
+	max-width: 200px;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.center {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*Pagina de frente principal
+*/
+#fp-regular {
+	left:0000px;
+}
+
+#fp-first-run {
+	width:60%;
+	margin: 15px auto;
+}
+.fp-wrap {
+	background-color: rgba(255,255,255,.7);
+	padding:20px;
+	margin:20px;
+    margin-bottom: 75px;
+	border-radius: 15px;
+}
+#fp-regular .fp-wrap a:before {
+	font-size:130px;
+
+}
+#fp-regular .fp-wrap h2 {
+	font-size: xx-large;
+	bottom: 0px;
+	position:relative;
+}
+.fp-wrap a {
+	height:150px;
+	width:150px;
+	border-radius:25px;
+}
+#fp-2 {
+	left:2000px;
+}
+#fp-3 {
+	left:4000px;
+}
+.fp {
+	position:absolute;
+	width:100%; /*change back to 100% after done messing */
+}
+.fp a.button {
+	margin: 10px auto;
+	position: relative;
+	max-width:500px;
+}
+#fp-div {
+	position:relative;
+	left:-4000px;
+}
+.button {
+	background-color:#886AEA;
+	color : #fff;
+}
+.bar-stable.bar-subheader.bar.bar-header {
+	background-color: #886AEA
+}
+/* when selected a box around the icon must show  */
+.tab-nav.tabs {
+	background-color: #886AEA
+}
+.maintitle{
+	color: #886AEA;
+	text-align: center;
+}
+
+.eliseuactivated {
+	margin-color: #886AEA;
+	margin-top: 0;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 0px,1px;
+	border-top: 0;
+	border-right: 10px;
+	border-left: 10px;
+	border-bottom: 0;
+	border-color: #fff;
+	background-color: #ECECFB;
+}
+.tab-item-active {
+	background-color: #ECECFB;
+
+}
 /* codigo do menu esquerdo cores e animacoes no estilo*/
 .side-menu-gradient{
 	background: -webkit-linear-gradient(top, #5C25BD 0%, #000 100%);
